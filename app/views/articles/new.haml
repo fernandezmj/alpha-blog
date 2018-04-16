@@ -1,0 +1,11 @@
+%h1 Create an article
+
+= form_for @article do |f|
+  %p
+    = f.label :title, "Title"
+    = f.text_field :title
+  %p
+    = f.label :desciption
+    = f.text_area :description
+  %p
+    = f.submit
