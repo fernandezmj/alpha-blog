@@ -4,14 +4,23 @@
     - @article.errors.full_messages.each do |msg|
       %li= msg
 
-= form_for @article do |f|
-  %p
-    = f.label :title, "Title"
-    = f.text_field :title
-  %p
-    = f.label :desciption
-    = f.text_area :description
-  %p
-    = f.submit
-
-= link_to "Back to Articles Listing", articles_path
+.row
+  .col-xs-12
+    = form_for @article, html:{class: "form-horizontal", role: "form"} do |f|
+      .form-group
+        .control-label.col-sm-2
+          = f.label :title, "Title"
+        .col-sm-8
+          = f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true
+      .form-group
+        .control-label.col-sm-2
+          = f.label :desciption
+        .col-sm-8
+          = f.text_area :description, rows: 10, class: "form-control", placeholder: "Body of article"
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          = f.submit class: "btn btn-primary btn-lg"
+  .col-xs-4.col-xs-offset-4
+    [
+    = link_to "Cancel request and return to articles listing", articles_path 
+    ]

@@ -1,4 +1,4 @@
-$navbar-default-bg: #08088A;
+
 
 #logo {
   float: left;
@@ -9,6 +9,11 @@ $navbar-default-bg: #08088A;
   font-weight: bold;
 }
 
+.navbar-default {
+  background: #000;
+  border-radius: 0;
+}
+
 .center {
   text-align: center
 }
@@ -16,6 +21,7 @@ $navbar-default-bg: #08088A;
 .jumbotron {
   background-image: asset-url('RoR.jpeg');
   background-size: cover;
+  height: 550px;
 }
 
 .jumbotron > h1 {
