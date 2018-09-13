@@ -1,6 +1,7 @@
 %h1{align: "center"} Alpha Bloggers
 
 .users-container{align: "center"}
+  = will_paginate
   - @users.each do |user|
     %ul.listing
       .row
@@ -10,3 +11,4 @@
             = link_to user.username, user_path(user)
           %li.small
             = pluralize(user.articles.count, "article") if user.articles
+  = will_paginate

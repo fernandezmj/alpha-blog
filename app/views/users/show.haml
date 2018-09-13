@@ -6,4 +6,9 @@
 
 %h4{align: "center"}
   #{@user.username}'s articles
-= render 'articles/article', obj: @user.articles
+.center
+  = will_paginate @user_articles
+= render 'articles/article', obj: @user_articles
+.center
+  = will_paginate @user_articles
+  
